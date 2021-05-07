@@ -15,16 +15,15 @@ import PostType from '../../../types/post'
 
 type PostProps = {
   post: PostType
-  preview?: boolean
 }
 
-const Post: React.FC<PostProps> = ({ post, preview }) => {
+const Post: React.FC<PostProps> = ({ post }) => {
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
   return (
-    <Layout preview={preview}>
+    <Layout>
       <Container>
         <Header />
         {router.isFallback ? (
