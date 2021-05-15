@@ -78,7 +78,7 @@ export const NavBar: React.FC = () => {
                       aria-hidden="true"
                       className={`block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-8 ${
                         router.pathname === menu.href && 'text-white'
-                      }`}
+                      } ${router.pathname !== menu.href && 'cursor-pointer'}`}
                     >
                       {menu.text}
                     </span>
