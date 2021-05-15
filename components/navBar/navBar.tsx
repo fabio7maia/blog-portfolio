@@ -31,11 +31,9 @@ export const NavBar: React.FC = () => {
     setShowMenu((oldValue) => !oldValue)
   }, [])
 
-  console.log('NavBar > render', { router, isLgViewport })
-
   return (
     <>
-      <div className="bg-green-400 fixed w-full">
+      <div className="bg-green-400 fixed w-full z-50">
         <nav className="flex items-center justify-between flex-wrap bg-teal-500 py-4 px-10">
           <div className="flex items-center flex-shrink-0 text-white cursor-pointer">
             <Link href="/">
@@ -91,7 +89,7 @@ export const NavBar: React.FC = () => {
           )}
         </nav>
       </div>
-      <div className="h-20" />
+      <div className="h-24" />
     </>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 
-export const Home = () => {
+export const Home: React.FC = () => {
   const router = useRouter()
 
   React.useEffect(() => {

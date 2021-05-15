@@ -15,8 +15,6 @@ export const useIsViewport = (dimension: UseIsViewportProps) => {
     updateWidth()
   }, [])
 
-  console.log('useIsViewport', { width })
-
   switch (dimension) {
     case 'sm':
       return width >= 640

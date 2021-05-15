@@ -1,12 +1,10 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import Container from '../components/container'
-import { NavBar } from '../components'
-import Layout from '../components/layout'
+import { Container, Layout, NavBar } from '@components'
 import { CMS_NAME } from '../lib/constants'
 import '../styles/index.css'
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <Layout>
       <Head>
@@ -19,3 +17,5 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     </Layout>
   )
 }
+
+export default App
