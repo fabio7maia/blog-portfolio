@@ -1,6 +1,7 @@
 export * from './avatar'
 export * from './box'
 export * from './container'
+export * from './darkModeToogle'
 export * from './footer'
 export * from './layout'
 export * from './meta'

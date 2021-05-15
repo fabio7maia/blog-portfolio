@@ -10,10 +10,10 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Meta />
-      <Box className="min-h-screen">
+      <Box className="dark:bg-gray-700 dark:text-white min-h-screen">
         <main>{children}</main>
+        <Footer />
       </Box>
-      <Footer />
     </>
   )
 }
