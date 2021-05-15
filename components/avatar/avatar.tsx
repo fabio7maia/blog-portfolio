@@ -6,7 +6,7 @@ type AvatarProps = {
   className?: string
   image: string
   name: React.ReactNode
-  position: React.ReactNode
+  position?: React.ReactNode
 }
 
 export const Avatar: React.FC<AvatarProps> = ({
@@ -29,10 +29,14 @@ export const Avatar: React.FC<AvatarProps> = ({
         >
           {name}
         </Typography>
-        <Typography className={`${isMobileViewport && 'text-center'} text-xs`}>
-          {position}
-        </Typography>
-        <Box className="mt-4">{children}</Box>
+        {position && (
+          <Typography
+            className={`${isMobileViewport && 'text-center'} text-xs`}
+          >
+            {position}
+          </Typography>
+        )}
+        {children && <Box className="mt-4">{children}</Box>}
       </Box>
     </Box>
   )

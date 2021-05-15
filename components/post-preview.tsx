@@ -1,4 +1,4 @@
-import Avatar from './avatar'
+import { Avatar } from '@components'
 import DateFormatter from './date-formatter'
 import CoverImage from './cover-image'
 import Link from 'next/link'
@@ -35,7 +35,7 @@ const PostPreview = ({
         <DateFormatter dateString={date} />
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture} />
+      <Avatar name={author.name} image={author.picture} />
     </div>
   )
 }
